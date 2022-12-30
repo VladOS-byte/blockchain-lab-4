@@ -1,0 +1,16 @@
+# exclude SafeMath when calculating test coverage
+# https://eth-brownie.readthedocs.io/en/v1.10.3/config.html#exclude_paths
+reports:
+  exclude_contracts:
+    - SafeMath
+dependencies:
+    - uniswap/v2-core@1.0.1
+    - uniswap/v2-periphery@1.0.0-beta.0
+    - OpenZeppelin/openzeppelin-contracts@3.0.0
+
+compiler:
+    solc:
+        remappings:
+            - 'uniswap_core=uniswap/v2-core@1.0.1'
+            - 'uniswap_periphery=uniswap/v2-periphery@1.0.0-beta.0'
+            - 'openzeppelin=OpenZeppelin/openzeppelin-contracts@3.0.0'
